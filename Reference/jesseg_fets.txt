@@ -1,0 +1,5 @@
+<jesseg> Their diagram is correct.
+<jesseg> They could use a P-Channel part, but then it'd have to be inline with the positive power input, not the negative. Which they could have done.
+<spiked3_> ok, so ill look closer at the board when im done with it on the breadboard
+<jesseg> Ideally, protecting the positive side sort of makes more sense, but P-Channel fets have higher resistance and cost, so N-Channel is preferred
+<spiked3_> that ir part has both the body diode and the zener, kinda cool since I guess there are a lot of uses for this combination
