@@ -2152,9 +2152,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X3" device="/90" value="PWMX"/>
-<part name="R1" library="SparkFun-Passives" deviceset="RESISTOR" device="1206" value="1k"/>
 <part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY8" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 <part name="SUPPLY9" library="SparkFun-Aesthetics" deviceset="VDD" device=""/>
 <part name="RESET" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD-4" value="RESET"/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X4" device="/90" value="M1_ENC"/>
@@ -2163,10 +2161,13 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X2" device="" value="Reset"/>
+<part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="48.26" y="25.4" size="1.778" layer="91">revisions:</text>
+<text x="50.8" y="20.32" size="1.778" layer="91">4/18/2015 switch bumper to gnd</text>
 </plain>
 <instances>
 <instance part="GND" gate="G$1" x="210.82" y="63.5" rot="R180"/>
@@ -2187,9 +2188,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="SUPPLY7" gate="VDD" x="71.12" y="66.04" rot="R90"/>
 <instance part="GND5" gate="1" x="177.8" y="50.8" rot="R90"/>
 <instance part="JP2" gate="A" x="162.56" y="160.02" rot="R90"/>
-<instance part="R1" gate="G$1" x="134.62" y="142.24" rot="R90"/>
 <instance part="GND9" gate="1" x="160.02" y="144.78"/>
-<instance part="SUPPLY8" gate="VDD" x="134.62" y="137.16" rot="R180"/>
 <instance part="SUPPLY9" gate="VDD" x="162.56" y="134.62" rot="R180"/>
 <instance part="RESET" gate="G$1" x="220.98" y="132.08" rot="R90"/>
 <instance part="JP3" gate="A" x="142.24" y="91.44" rot="R180"/>
@@ -2198,6 +2197,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="GND3" gate="1" x="50.8" y="109.22" rot="R270"/>
 <instance part="GND4" gate="1" x="50.8" y="60.96" rot="R270"/>
 <instance part="JP1" gate="G$1" x="236.22" y="157.48" rot="R90"/>
+<instance part="GND6" gate="1" x="134.62" y="142.24"/>
 </instances>
 <busses>
 </busses>
@@ -2302,6 +2302,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="76.2" y1="68.58" x2="53.34" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="60.96" x2="53.34" y2="68.58" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<wire x1="134.62" y1="157.48" x2="134.62" y2="144.78" width="0.1524" layer="91"/>
+<pinref part="JP5" gate="G$1" pin="2"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VDD" class="1">
 <segment>
@@ -2344,10 +2349,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="76.2" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="73.66" y1="63.5" x2="73.66" y2="66.04" width="0.1524" layer="91"/>
 <junction x="73.66" y="66.04"/>
-</segment>
-<segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="SUPPLY8" gate="VDD" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="A" pin="2"/>
@@ -2590,13 +2591,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="GND" gate="G$1" pin="A2"/>
 <wire x1="223.52" y1="50.8" x2="231.14" y2="50.8" width="0.1524" layer="91"/>
 <label x="228.6" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="134.62" y1="157.48" x2="134.62" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="JP5" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="3.3" class="0">
