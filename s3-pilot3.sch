@@ -6243,8 +6243,6 @@ Source: http://www.atmel.com/dyn/resources/prod_documents/doc2593.pdf</descripti
 <part name="R1" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="1k"/>
 <part name="JTAG" library="pinhead" deviceset="PINHD-2X5" device=""/>
 <part name="5V_IN" library="pinhead" deviceset="PINHD-1X2" device=""/>
-<part name="JP20" library="pinhead" deviceset="PINHD-1X2" device="" value="SW_1"/>
-<part name="JP21" library="pinhead" deviceset="PINHD-1X2" device="" value="5V_1"/>
 <part name="JPX1" library="pinhead" deviceset="PINHD-1X12" device=""/>
 <part name="U$1" library="s3-pilot2-lbr" deviceset="MC33926-SINGLE-BO" device="" value="M2"/>
 <part name="IC1" library="atmel" deviceset="ATMEGA644" device="A"/>
@@ -6287,9 +6285,6 @@ Source: http://www.atmel.com/dyn/resources/prod_documents/doc2593.pdf</descripti
 4/18/2015 switch bumper to gnd
 11/7/2015 V3 started
 </text>
-<text x="276.86" y="109.22" size="1.778" layer="91">5V in from RC 5A switched regulator.
-Routed to Pi BUS via switch(or jumper).
-Also supplies Servos / Pings.</text>
 <text x="312.42" y="15.24" size="1.778" layer="97">3.3V
 150mA Out</text>
 <text x="220.98" y="101.6" size="1.778" layer="91">This doesnt make sense. where is ground?</text>
@@ -6403,8 +6398,6 @@ Also supplies Servos / Pings.</text>
 <instance part="R1" gate="G$1" x="474.98" y="170.18" rot="R180"/>
 <instance part="JTAG" gate="A" x="601.98" y="111.76"/>
 <instance part="5V_IN" gate="G$1" x="264.16" y="93.98" rot="R180"/>
-<instance part="JP20" gate="G$1" x="264.16" y="137.16" rot="R180"/>
-<instance part="JP21" gate="G$1" x="264.16" y="121.92" rot="R180"/>
 <instance part="JPX1" gate="G$1" x="563.88" y="-2.54"/>
 <instance part="U$1" gate="G$1" x="525.78" y="-2.54" rot="R180"/>
 <instance part="IC1" gate="G$1" x="510.54" y="91.44"/>
@@ -6630,11 +6623,6 @@ Also supplies Servos / Pings.</text>
 <wire x1="614.68" y1="106.68" x2="614.68" y2="101.6" width="0.1524" layer="91"/>
 <junction x="614.68" y="106.68"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="JP21" gate="G$1" pin="1"/>
-<wire x1="266.7" y1="119.38" x2="276.86" y2="119.38" width="0.1524" layer="91"/>
-<label x="279.4" y="119.38" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -7338,15 +7326,6 @@ Also supplies Servos / Pings.</text>
 <wire x1="276.86" y1="93.98" x2="266.7" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="JP21" class="0">
-<segment>
-<pinref part="JP20" gate="G$1" pin="1"/>
-<wire x1="266.7" y1="134.62" x2="276.86" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="JP21" gate="G$1" pin="2"/>
-<wire x1="266.7" y1="121.92" x2="276.86" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="276.86" y1="134.62" x2="276.86" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="INV"/>
@@ -7432,11 +7411,6 @@ Also supplies Servos / Pings.</text>
 </segment>
 </net>
 <net name="PISUPPLY" class="0">
-<segment>
-<pinref part="JP20" gate="G$1" pin="2"/>
-<wire x1="276.86" y1="137.16" x2="266.7" y2="137.16" width="0.1524" layer="91"/>
-<label x="276.86" y="137.16" size="1.778" layer="95"/>
-</segment>
 <segment>
 <wire x1="299.72" y1="93.98" x2="297.18" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="91.44" x2="297.18" y2="93.98" width="0.1524" layer="91"/>
